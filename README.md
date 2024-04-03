@@ -1,2 +1,2 @@
 # Diagrama de Clases
-![Diagrama de Clases](Diagrama de clases.png) 
+![Diagrama de Clases](/Diagrama de clases.png) 
