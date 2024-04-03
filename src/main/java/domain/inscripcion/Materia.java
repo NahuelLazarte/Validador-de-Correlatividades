@@ -4,12 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Materia {
-    public List<Materia> correlativas;
-    public String nombre;
+    private List<Materia> correlativas;
 
-    public Materia(String nombre){
+    public Materia(){
         this.correlativas = new ArrayList<>();
-        this.nombre = nombre;
     }
     public List<Materia> getCorrelativas() {
         return correlativas;
@@ -17,4 +15,5 @@ public class Materia {
     public void agregarCorrelativa(Materia correlativa) {
         this.correlativas.add(correlativa);
     }
+
 }

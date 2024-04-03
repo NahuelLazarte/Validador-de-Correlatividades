@@ -14,14 +14,7 @@ public class Inscripcion { //Se necesita un alumno, la lista de materias que se 
     }
     public Boolean aprobada(){//se verifica si para cada materia a inscribirse el alumno la tiene cursada
         return this.materiasAInscribirse.stream().
-                allMatch( materia -> materia.correlativas.stream().allMatch(correlativa -> this.alumno.materiasCursadas.contains(correlativa)) );
-    }
-
-    public void imprimirMateriasAInscribirse() {
-        System.out.println("Materias a inscribirse:");
-        for (Materia materia : materiasAInscribirse) {
-            System.out.println(materia.nombre);
-        }
+                allMatch( materia -> materia.getCorrelativas().stream().allMatch(correlativa -> this.alumno.getMateriasCursadas().contains(correlativa)) );
     }
 
 }

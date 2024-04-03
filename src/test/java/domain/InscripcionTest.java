@@ -11,33 +11,22 @@ import java.util.List;
 public class InscripcionTest {
     @Test
     public void alumnoPuedeCursaDisenio(){
-        Materia analisisDeSistemas = new Materia("analisisDeSistemas");
-        Materia paradigmasDeProgramacion = new Materia("paradigmasDeProgramacion");
-        Materia nada = new Materia ("nada");
+        Materia analisisDeSistemas = new Materia();
+        Materia paradigmasDeProgramacion = new Materia();
 
-
-        Materia disenio = new Materia("disenio");
+        Materia disenio = new Materia();
         disenio.agregarCorrelativa(analisisDeSistemas);
         disenio.agregarCorrelativa(paradigmasDeProgramacion);
-
 
         Alumno jose = new Alumno();
         jose.agregarMateriaCursada(analisisDeSistemas);
         jose.agregarMateriaCursada(paradigmasDeProgramacion);
 
-
         List<Materia> materiasAInscribirse = new ArrayList<>();
         materiasAInscribirse.add(disenio);
 
         Inscripcion inscripcion = new Inscripcion(jose,materiasAInscribirse);
-        inscripcion.imprimirMateriasAInscribirse();
-
-        jose.imprimirMateriasCursadas();
         Assert.assertTrue(inscripcion.aprobada());
-
-        disenio.agregarCorrelativa(nada);
-        //Assert.assertTrue(inscripcion.aprobada());
     }
-
 }
 
